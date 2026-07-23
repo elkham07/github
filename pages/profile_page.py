@@ -11,6 +11,10 @@ class ProfilePage(BasePage):
     def open_repository(self, repo_name: str):
         self.page.get_by_role('link', name=repo_name).click()
 
+
+    def get_repositories(self):
+        return self.page.get_by_role('link', name='Repositories')
+
     
     def open_followers(self):
         self.page.get_by_role('link', name='followers').click()
@@ -18,8 +22,3 @@ class ProfilePage(BasePage):
     
     def open_following(self):
         self.page.get_by_role('link', name='following').click()
-
-
-    def get_nickname_locator(self):
-        return self.page.locator('.p-nickname')
-    
