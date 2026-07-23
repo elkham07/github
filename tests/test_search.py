@@ -39,7 +39,4 @@ def test5_search(page: Page):
     page.get_by_role('combobox', name='Search').fill('react')
     page.get_by_role('combobox', name='Search').press('Enter')
     page.get_by_role('link', name='Python').click()
-
-def test6_search(page: Page):
-    page.goto('https://github.com/')
     
